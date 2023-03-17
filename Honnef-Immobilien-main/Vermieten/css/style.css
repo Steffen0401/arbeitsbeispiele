@@ -1,0 +1,153 @@
+@import url('../../css/common.css');
+
+#realEstate div {
+    padding-top: 0;
+    padding-bottom:0;
+}
+
+#realEstate > a {
+    float: right;
+}
+
+#realEstate .fontnull {
+    font-size: 0;
+}
+
+#realEstate div#moreInfo {
+    display: block;
+    padding: 20px 0;
+    text-align: right;
+}
+#realEstate div#moreInfo a{
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+#realEstate div#ivd24Container  {
+    max-width: 1700px;
+    margin: 0 auto 50px;
+}
+#realEstate div#ivd24-container i {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+}
+#realEstate #ivd24-container .aw-objects-grid {
+    display: block;
+}
+#realEstate #ivd24-container .aw-objects-grid > div {
+    max-width: 900px !important;
+    margin: 20px 0;
+    float: left;
+    box-shadow: 1px 1px 10px -4px var(--gray);
+}
+#realEstate #ivd24-container .aw-objects-grid > div:nth-child(even) {
+    float: right;
+}
+#realEstate #ivd24-container span {
+    font-size: 18px;
+}
+#realEstate #ivd24-container .title {
+    font-size: 25px;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+#realEstate #ivd24-container .aw-tag {
+    display: none;
+}
+#realEstate #ivd24-container .m-aw-objekt .detail {
+    align-items: flex-start !important;
+    margin-right: 30px !important;
+}
+#realEstate #ivd24-container .expose-link {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 10px !important;
+    width: max-content !important;
+    max-width: unset !important;
+    font-size: 21px !important;
+    font-weight: normal !important;
+    border: none !important;
+    color: white !important;
+    background-color: var(--blue) !important;
+}
+#ivd24-container .mb-3 > div {
+    margin: 8px !important;
+}
+#realEstate #expose a.btn span,
+#realEstate #expose button {
+    color: white !important;
+}
+
+
+#realEstate div.hide {
+    display: none;
+}
+#realEstate #formBox {
+    background-color: white;
+    box-shadow: 0px 0px 5px var(--lightgray);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 110;
+    overflow-y: auto;
+    padding: 40px;
+    max-height: 80vh;
+}
+#realEstate span {
+    font-size: 12px;
+}
+#realEstate ul {
+    list-style: none;
+}
+#realEstate p {
+    margin: 20px 0;
+}
+#realEstate input[type=checkbox] {
+    margin-top: 20px;
+}
+#realEstate #formBox i {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    padding: 10px;
+}
+#realEstate #formBox i:hover {
+    color: var(--blue);
+}
+
+@media screen and (max-width: 1350px) {
+    #realEstate h1.pageHeadline {
+        margin: 30px;
+        width: auto;
+    }
+}
+@media screen and (max-width: 1000px) {
+    #realEstate #formBox {
+        width: 80vw;
+    }
+
+    #realEstate #ivd24-container span {
+        font-size: 17px;
+    }
+    #realEstate #ivd24-container .title {
+        font-size: 21px;
+    }
+    #ivd24-container .expose-link {
+        font-size: 17px;
+    }
+
+}
+@media screen and (max-width: 550px) {
+    #realEstate #formBox {
+        width: 99vw;
+    }
+}
+@media screen and (max-width: 460px) {
+    #ivd24-container .mb-3 a.btn span {
+        display: none;
+    }
+}

@@ -1,0 +1,63 @@
+@import url('../../css/common.css');
+
+#recall p {
+    margin: 10px 0;
+    hyphens: auto; 
+	text-align: justify;
+}
+#recall ul {
+    list-style: none;
+    background-color: var(--lightlightgray);
+    width: max-content;
+    padding: 10px;
+}
+#recall h2 {
+    margin-bottom: 7px;
+}
+#recall a {
+    width: min-content;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    font-size: 15px;
+    margin-top: 25px;
+    padding: 10px;
+    background-color: rgb(236, 236, 236);
+}
+#recall i {
+    margin-right: 10px;
+    font-size: 20px;
+    color: var(--gray);
+}
+
+@media screen and (max-width: 750px) {
+    #recall h1.pageHeadline {
+        font-size: 40px;    
+    }
+}
+@media screen and (max-width: 620px) {
+    #recall h1.pageHeadline {
+        margin: 30px;
+        width: auto;
+    }
+    #recall > div {
+        padding: auto 40px ;
+    }
+    #recall h2 {
+        position: relative;
+        /* font-size: 25px; */
+    }
+    #recall ul {
+        width: auto;
+    }
+}
+@media screen and (max-width: 430px) {
+    #recall h2 {
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 360px) {
+    #recall h1.pageHeadline {
+        font-size: 35px;
+    }
+}

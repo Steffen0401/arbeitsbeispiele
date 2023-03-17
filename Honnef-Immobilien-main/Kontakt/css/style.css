@@ -1,0 +1,109 @@
+@import url('../../css/common.css');
+
+#contakt #formBox h2 {
+    text-align: center;
+    color: var(--blue);
+    font-size: 40px;
+} 
+
+#contakt table th {
+    text-align: left;
+    width: 50%;
+}
+#contakt table td:nth-child(2) {
+    width: 100px;
+}
+#contakt td > i {
+    float: right;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--blue);
+    color: white;
+    margin-right: 20px;
+}
+#contakt table tr {
+    height: 100px;
+}
+
+#contakt #openingTimes h2 {
+    text-align: center;
+    font-size: 40px;
+    margin: 30px;
+    color: var(--blue);
+} 
+#contakt #openingTimes h3 {
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+}
+
+#contakt #openingTimes div.timeDiv  {
+    background-color: var(--blue);
+    text-align: center;
+    box-shadow: 0px -10px var(--gray);
+    max-width: 800px;
+    margin: 20px auto;
+}
+#contakt #openingTimes ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    transform: translateY(-10px);
+}
+#contakt #openingTimes div.timeDiv > div {
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    height: 20px;
+    width: 80%;
+    margin: auto;
+}
+#contakt #openingTimes ul li {
+    padding: 5px;
+    margin: 0 10px;
+    background-color: white;
+    color: var(--gray);
+}
+#contakt #openingTimes p {
+    color: white;
+    margin: 20px;
+    text-align: center;
+}
+
+#contakt form {
+    display: block;
+    margin: auto;
+}
+#contakt iframe {
+    width: 560px;
+    height: 500px;
+}
+
+@media screen and (max-width: 650px) {
+    #contakt #openingTimes div.timeDiv {
+        width: 90vw;
+        margin: 20px 0;
+    }
+}
+@media screen and (max-width: 570px) {
+    #contakt iframe {
+        width: 95vw;
+        height: 400px;
+    }
+    #contakt #openingTimes ul li {
+        font-size: 12px;
+        margin: 0 3px;
+    }
+    #contakt #openingTimes h2,
+    #contakt #form h2 {
+        font-size: 35px;
+    }
+    #contakt #form h3 {
+        font-size: 25px;
+    }
+    #contakt h1 {
+        width: auto;
+        margin: 30px;
+        font-size: 40px;
+    }
+}

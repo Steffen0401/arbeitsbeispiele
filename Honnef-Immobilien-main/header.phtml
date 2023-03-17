@@ -1,0 +1,36 @@
+<body>
+    <?php 
+        error_reporting(0);
+        if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+            $url = "https://";   
+        } else {
+            $url = "http://";   
+        } 
+        if ($_SERVER['HTTP_HOST'] == 'localhost') {
+            $url.= $_SERVER['HTTP_HOST'];
+            $url.= '/Honnef-Immobilien/';
+        } else {
+            $url.= $_SERVER['HTTP_HOST'];
+        }
+    ?>
+    <header>
+        <div id="innerHeader">
+            <a href="<?php echo $url ?>" class="headerImg"></a>
+                
+            <div>
+                <i class="fas fa-bars fa-2x"></i>
+            </div>
+            <nav>
+                <ul id="headerLinks">
+                    <li><a href="<?php echo $url ?>/Unternehmen/" class="company">Unternehmen</a></li>
+                    <li><a href="<?php echo $url ?>/Leistungen/" class="performance">Leistungen</a></li>
+                    <li><a href="<?php echo $url ?>/Kontakt/" class="contakt">Kontakt</a></li>
+                </ul>                        
+                <ul id="socialLinks">
+                    <li><a class="fab fa-youtube" href="https://www.youtube.com/user/HonnefImmobilien" target="_blank" title="YouTube"></a></li>
+                    <li><a class="fab fa-instagram" href="https://www.instagram.com/honnef_immobilien" target="_blank" title="Instagram"></a></li>
+                    <li><a class="fab fa-facebook" href="https://www.facebook.com/honnefimmobiliengotha" target="_blank" title="Facebook"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>

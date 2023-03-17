@@ -1,0 +1,169 @@
+@import url('../../css/common.css');
+
+#propertyManagement div.verwaltenImg {
+    position: relative;
+    display: flex;
+    background-color: var(--blue);
+    padding: 0;
+}
+#propertyManagement div.verwaltenImg img {
+    display: block;
+    width: 75vw;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 90;
+}
+#propertyManagement div.verwaltenImg::before {
+    content: ' ';
+    width: 40vw;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#propertyManagement h3 {
+    color: var(--gray);
+    margin-bottom: 0;
+}
+
+#propertyManagement .descDiv {
+    margin: 0;
+    padding: 0 0 30px;
+    display: grid;
+    grid-template-columns: 20vw auto auto 20vw;
+    grid-template-rows: 140px;
+}
+#propertyManagement .descDiv .descContent {
+    background-color: var(--lightblue);
+    padding: 20px;
+    max-height: 150px;
+    width: 500px;
+    margin: auto;
+    vertical-align: middle;
+    transition: max-height 1s;
+}
+#propertyManagement .descDiv .wegManagement {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    z-index: 95;
+}
+#propertyManagement .descDiv .specialManagement {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    z-index: 91;
+}
+#propertyManagement .descDiv .bg {
+    background-color: var(--lightgray);
+    height: 90px;
+    margin: 24px 0 ;
+    z-index: 80;
+}
+#propertyManagement .descDiv .row1.bg {
+    grid-column: 1/5;
+    grid-row: 1/2;
+}
+#propertyManagement .descDiv .row2.bg {
+    display: none;
+}
+
+#propertyManagement div.descDiv h2 {
+    color: white;
+    text-align: center;
+}
+#propertyManagement div.descDiv p {
+    max-height: 0;
+    transition: max-height 1s;
+    overflow-y: hidden;
+    color: white;
+    font-size: 22px;
+    hyphens: none;
+}
+
+#propertyManagement .descDiv .descContent:hover {
+    max-height: 600px;
+    transition: max-height 1s;
+}
+#propertyManagement .descDiv .descContent:hover p {
+    max-height: 600px;
+    transition: max-height 1s;
+}
+
+#propertyManagement form {
+    margin: 20px auto;
+}
+
+
+@media screen and (max-width: 2000px) {
+    #propertyManagement .descDiv {
+        grid-template-columns: 10vw auto auto 10vw;
+    }
+}
+@media screen and (max-width: 1400px) {
+    #propertyManagement .descDiv {
+        grid-template-columns: 5vw auto auto 5vw;
+    }
+}
+@media screen and (max-width: 1200px) {
+    #propertyManagement .descDiv {
+        grid-template-columns: 30px auto 30px;
+        grid-template-rows: 140px 140px;
+        row-gap: 40px;
+    }
+    #propertyManagement .descDiv .specialManagement {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    #propertyManagement .descDiv .row1.bg {
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+    #propertyManagement .descDiv .row2.bg {
+        display: block;
+        grid-column: 1/4;
+        grid-row: 2/3;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    #propertyManagement h1.pageHeadline {
+        font-size: 40px;    
+    }
+}
+@media screen and (max-width: 700px) {
+    #propertyManagement h1.pageHeadline {
+        margin: 30px;
+        width: auto;
+    }
+}
+@media screen and (max-width: 600px) {
+    #propertyManagement .descDiv {
+        row-gap: 25px;
+    }
+    #propertyManagement h1.pageHeadline {
+        margin: 30px;
+        width: auto;
+    }
+    #propertyManagement .descDiv .bg {
+        height: 80px;
+        margin: 25px 0 ;
+        z-index: 80;
+    }
+    #propertyManagement .descDiv .descContent {
+        padding: 10px;
+        width: auto;
+    }
+}
+@media screen and (max-width: 420px) {
+    #propertyManagement h1.pageHeadline {
+        font-size: 30px;    
+    }
+    #propertyManagement div.descDiv h2 {
+        font-size: 21px;
+    }
+    #propertyManagement div.descDiv p {
+        font-size: 17px;
+    }
+}

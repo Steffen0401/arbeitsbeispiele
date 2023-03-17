@@ -1,0 +1,28 @@
+@import url('../../css/common.css');
+
+#performance .pictureText img {
+    max-height: 450px;
+    min-height: 320px;
+}
+
+#performance .leistungImgDiv {
+    padding: 0;
+    background-color: var(--blue);
+}
+
+#performance .leistungImgDiv img {
+    width: 60vw;
+    display: block;
+}
+
+#performance p {
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 500px) {
+    #performance h1.pageHeadline {
+        margin: 30px;
+        width: auto;
+        font-size: 40px;
+    }
+}

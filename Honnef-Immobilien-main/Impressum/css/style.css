@@ -1,0 +1,52 @@
+@import url('../../css/common.css');
+
+#imprint div.table {
+    display: flex;
+    justify-content: space-between;
+}
+#imprint div.table ul {
+    width: 50%;
+    margin: 10px 0;
+}
+#imprint li {
+    list-style: none;
+}
+
+#imprint #disclaimerHeader {
+    color: var(--blue);
+    margin: 50px 0 0 0;
+}
+#imprint #disclaimer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#imprint .disclaimerItem {
+    display: inline-grid;
+    background-color: rgb(236, 236, 236);
+    width: 500px;
+    padding: 20px;
+    margin-top: 20px;
+}
+#imprint .disclaimerItem h3 {
+    margin: 0;
+}
+#imprint .disclaimerItem p {
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width: 800px) {
+    #imprint div.table {
+        flex-direction: column;
+    }
+    #imprint div.table ul {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #imprint h1.pageHeadline {
+        font-size: 40px;
+    }
+}

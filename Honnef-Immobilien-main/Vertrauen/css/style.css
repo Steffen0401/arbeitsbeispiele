@@ -1,0 +1,435 @@
+@import url('../../css/common.css');
+
+/* contentSelection */
+#trust div.contentSelection {
+    display: grid;
+    padding: 0;
+    grid-template-columns: 1fr max-content max-content 1fr;
+    column-gap: 50px;
+    margin-bottom: 100px;
+}
+#trust div.contentSelection a{
+    background-color: var(--lightblue);
+    cursor: pointer;
+    margin: auto;
+    width: 350px;
+    height: 150px;
+    position: relative;
+    z-index: 60;
+    text-decoration: none;
+    transform: translateY(0);
+    transition: transform 0.5s;
+}
+#trust div.contentSelection a:hover {
+    transform: translateY(-8px);
+}
+#trust div.contentSelection a p {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 25px;
+    font-weight: normal;
+    text-align: center;
+    transition: transform 0.5s;
+}
+
+#trust div.contentSelection #showReferenceObjects {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+#trust div.contentSelection #showInformations {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+#trust div.contentSelection div {
+    background-color: var(--lightgray);
+    width: 100%;
+    height: 90px;
+    margin: 30px 0;
+    z-index: 30;
+}
+#trust div.contentSelection .bgrow1 {
+    grid-column: 1/5;
+    grid-row: 1/2;
+}
+#trust div.contentSelection .bgrow2 {
+    display: none;
+}
+/* contentSelection end */
+
+/* back button */
+#trust a.backBtn {
+    display: inline-block;
+    padding: 0;
+    color: var(--blue);
+    padding: 5px;
+    padding-top: 3px;
+    text-decoration: none;
+}
+#trust a.backBtn i {
+    position: relative;
+    top: 2px;
+}
+#trust a.backBtn:hover {
+    color: white;
+    background-color: var(--blue);
+}
+/* back button end */
+
+/* Reference Objects */
+#trust div.referenceObjects {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: auto;
+}
+
+#trust div.referenceObjects > div > div {
+    margin: 20px;
+    width: 350px;
+    max-height: 200px;
+    transition: max-height 0.3s;
+    overflow-y: hidden;
+    background-color: var(--lightlightgray);
+    color: var(--blue);
+}
+#trust div.referenceObjects > div > div:nth-child(even) {
+    background-color: var(--blue);
+    color: var(--lightlightgray);
+}
+#trust div.referenceObjects > div > div:hover {
+    max-height: 350px;
+    transition: max-height 0.5s;
+}
+
+#trust div.referenceObjects div h3,
+#trust div.referenceObjects div p {
+    margin: 10px 20px;
+    hyphens: unset; 
+    text-align: unset;
+}
+
+#trust div.referenceObjects > div > div:nth-child(even) h3 {
+    color: var(--lightlightgray);
+}
+
+#trust div.referenceObjects img {
+    width: 100%;
+    height: 200px;
+    display: block;
+}
+/* Reference Objects end */
+
+/* informations */
+#trust .bigInformationBg {
+    display: none;
+}
+#trust .bigInformationBg.show {
+    display: block;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 110;
+    opacity: 0.6;
+}
+#trust div.informations {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+#trust div.informationArticle div.informationText p {
+    margin-bottom: 10px;
+}
+#trust div.informationArticle div.informationText ul {
+    margin-left: 5px;
+    margin-bottom: 10px;
+    list-style: inside;
+}
+#trust div.informationArticle div.informationText a {
+    position: relative;
+}
+#trust div.informationArticle.smallArticle {
+    margin: 10px auto 50px;
+    width: 100%;
+    background-color: var(--lightlightgray);
+}
+#trust div.informationArticle.smallArticle div.closeArtikel {
+    display: none;
+}
+
+#trust div.informationArticle.smallArticle h3 {
+    background-color: var(--blue);
+    cursor: pointer;
+    color: white;
+    margin: 0;
+    line-height: 22px;
+    height: max-content;
+    padding: 20px;
+    overflow-y: hidden;
+}
+#trust div.informationArticle.smallArticle h3:hover {
+    text-decoration: underline;
+}
+#trust div.informationArticle.smallArticle span {
+    color: var(--blue);
+    margin: 20px;
+    position: relative;
+    line-height: 30px;
+}
+#trust div.informationArticle.smallArticle div.informationText {
+    color: var(--blue);
+    padding: 20px;
+    line-height: 21px;
+    height: 169px;
+    position: relative;
+    top: -10px;
+    overflow: hidden;
+}
+#trust div.informationArticle.smallArticle img {
+    display: block;
+    float: left;
+    height: 200px;
+    width: 350px;
+}
+#trust div.informationArticle.smallArticle i {
+    display: none;
+}
+#trust div.informationArticle.smallArticle > a {
+    display: none;
+}
+
+#trust div.informationArticle.bigArticle {
+    display: grid;
+    grid-template-rows: max-content max-content max-content auto;
+    grid-template-columns: min-content auto min-content;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 160;
+    overflow-y: scroll;
+    padding: 10px 30px 30px;
+    max-width: 1200px;
+    height: max-content;
+    max-height: 90vh;
+    margin: auto;
+    box-shadow: 0 0 20px -10px var(--gray);
+    z-index: 120;
+}
+#trust div.informationArticle.bigArticle h3{
+    background-color: transparent;
+    color: var(--blue);
+    font-size: 30px;
+    line-height: 30px;
+    height: max-content;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 10px;
+    grid-row: 2/3;
+    grid-column: 1/3;
+}
+#trust div.informationArticle.bigArticle span {
+    grid-row: 3/4;
+    grid-column: 1/3;
+}
+#trust div.informationArticle.bigArticle div.informationText {
+    height: max-content;
+    color: var(--gray);
+    padding: 0;
+    margin: 20px 40px 20px 20px;
+    grid-row: 4/5;
+    grid-column: 2/3;
+}
+#trust div.informationArticle.bigArticle img {
+    margin: 20px;
+    height: 200px;
+    width: 350px;
+    grid-row: 4/5;
+    grid-column: 1/2;
+}
+
+#trust div.informationArticle.bigArticle div.closeArtikel {
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+    transition: color 0.5s;
+    width: max-content;
+    padding: 5px 10px
+}
+#trust div.informationArticle.bigArticle div.closeArtikel p {
+    padding-bottom: 5px;
+    margin: 0;
+    margin-left: 5px;
+    color: var(--blue);
+    transition: color 0.5s;
+}
+#trust div.informationArticle.bigArticle div.closeArtikel:hover {
+    color: white;
+    background-color: var(--blue);
+    transition: color 0.5s;
+    transition: background-color 0.5s;
+}
+#trust div.informationArticle.bigArticle div.closeArtikel:hover p{
+    color: white;
+    transition: color 0.5s;
+}
+
+#trust div.informationArticle.bigArticle > a {
+    width: max-content;
+    height: max-content;
+    font-weight: normal;
+    padding: 8px 10px;
+    color: var(--blue);
+    transition: color 0.5s;
+    transition: background-color 0.5s;
+    position: relative;
+    grid-row: 5/6;
+    float: right;
+}
+#trust div.informationArticle.bigArticle > a:hover {
+    color: white;
+    background-color: var(--blue);
+    transition: color 0.5s;
+    transition: background-color 0.5s;
+}
+/* information end */
+
+@media screen and (max-width: 1000px) {
+    #trust div.picture {
+        flex-direction: column;
+        margin: 0;
+        background-color: transparent;
+        align-items: flex-start;
+    }
+    #trust div.picture img {
+        width: 800px;
+        position: unset;
+    }
+    #trust div.picture p {
+        width: auto;
+        min-width: 0;
+        padding: 30px;
+        margin-left: 10vw;
+        max-width: none;
+        background-color: var(--blue);
+    }
+}
+@media screen and (max-width: 900px) {
+    #trust div.informationArticle.bigArticle {
+        grid-template-rows: max-content max-content max-content max-content auto;
+        grid-template-columns: auto;
+    }
+
+    #trust div.informationArticle.bigArticle div.informationText {
+        height: max-content;
+        color: var(--gray);
+        padding: 0;
+        margin: 20px 40px 20px 20px;
+        grid-row: 5/6;
+        grid-column: 1/2;
+    }
+
+    #trust div.informationArticle.bigArticle a {
+        grid-row: 6/7;
+    }
+}
+@media screen and (max-width: 800px) {
+    #trust div.picture img {
+        width: 100vw;
+        min-height: 200px;
+    }
+    #trust div.picture p {
+        margin: 0;
+    }
+}
+@media screen and (max-width: 838px) {
+    #trust h1.pageHeadline.informations {
+        width: auto;
+        margin: 30px;
+    }
+    #trust div.contentSelection {
+        grid-template-columns: 1fr max-content 1fr;
+        grid-template-rows: auto auto;
+        row-gap: 30px;
+        column-gap: 0;
+    }
+    #trust div.contentSelection #showReferenceObjects {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    #trust div.contentSelection #showInformations {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    #trust div.contentSelection .bgrow1 {
+        grid-column: 1/4;
+        grid-row: 1/2;
+    }
+    #trust div.contentSelection .bgrow2 {
+        display: block;
+        grid-column: 1/4;
+        grid-row: 2/3;
+    }
+
+    #trust div.informationArticle.smallArticle span {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+@media screen and (max-width: 790px) {
+    #trust div.informationArticle.smallArticle div.informationText {
+        height: 65px;
+    }
+    #trust div.informationArticle.smallArticle img {
+        float: unset;
+        margin: 5px 20px 0;
+
+    }
+    #trust div.informationArticle.smallArticle {
+        height: max-content;
+    }
+}
+@media screen and (max-width: 470px) {
+    #trust h1.pageHeadline.referenceObjects {
+        width: auto;
+        margin: 30px;
+        font-size: 33px;
+    }
+    #trust h1.pageHeadline.informations {
+        margin: 30px 20px;
+        padding: 10px;
+        font-size: 30px;
+    }
+    #trust div.informationArticle.bigArticle {
+        padding: 20px;
+    }
+    #trust div.informationArticle.bigArticle div.informationText {
+        margin: 0;
+    }
+    #trust div.informationArticle.bigArticle img {
+        margin: 20px 0;
+        width: 90vw;
+        height: auto;
+    }
+    #trust div.informationArticle.smallArticle img {
+        width: 100%;
+        height: auto;
+        margin: 5px 0 0;
+    }
+    #trust div.informationArticle.smallArticle span {
+        margin: 10px;
+    }
+}
+@media screen and (max-width: 410px) {
+    #trust div.contentSelection a {
+        width: 80vw;
+    }
+}

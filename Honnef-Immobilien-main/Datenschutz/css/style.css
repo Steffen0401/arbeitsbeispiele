@@ -1,0 +1,42 @@
+@import url('../../css/common.css');
+
+#privacyPolicy h2 {
+    color: var(--blue);
+}
+#privacyPolicy h3 {
+    margin-bottom: 5px;
+}
+#privacyPolicy ul {
+    margin-left: 20px;
+}
+#privacyPolicy strong {
+    font-weight: normal;
+}
+
+#privacyPolicy div.table {
+    display: flex;
+    justify-content: space-between;
+}
+#privacyPolicy div.table ul {
+    width: 50%;
+    margin: 10px 0;
+}
+#privacyPolicy div.table li {
+    list-style: none;
+}
+
+@media screen and (max-width: 800px) {
+    #privacyPolicy div.table {
+        flex-direction: column;
+    }
+    #privacyPolicy div.table ul {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #privacyPolicy h1.pageHeadline {
+        font-size: 40px;
+    }
+}
+
