@@ -88,7 +88,7 @@
         if ($sendMail) {
             $email_from = $email;
             $header="From: $email_from";
-            $email_get = "linus.steinert@icloud.com";
+            $email_get = "";
             $regarding = "Stoerungsmeldung";
             $msg =  "Versendet am " . date('d.m.Y') . " um " . date('H:i') . "Uhr \n" .
                     "\n" .
