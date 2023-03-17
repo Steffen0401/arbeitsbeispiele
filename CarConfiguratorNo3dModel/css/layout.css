@@ -1,0 +1,681 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 30px;
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666; 
+}
+
+::-webkit-scrollbar-track {
+  background: #000; 
+}
+
+::-webkit-scrollbar-corner {
+  background: #999; 
+}
+
+::-webkit-resizer {
+  background: #111; 
+}
+
+/* header */
+header{
+  height: 100vh;
+  background-color: black;
+  display: grid;
+}
+
+header img{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 890px;
+  /* height: 500px; */
+}
+
+#corvetteHeaderLogo{
+  font-family: "grandsport";
+  color: white;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+
+}
+
+#corvetteHeaderLogo .letter{
+  display:inline-block;
+}
+
+#scrollDown{
+  color:white;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  font-size: 20px;
+}
+
+/* nav */
+nav{
+  background-color: black;
+  z-index: 100;
+  position: sticky; 
+  top: 0; 
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+nav ul li a {
+  padding: 5px;
+  display: block;
+  white-space: nowrap;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav ul li a:hover{
+  color: #f7b731;
+}
+nav ul li::before {
+  content: none;
+}
+
+#configButton{
+  color: white;
+  font-size: 20px;
+  background-color: rgb(16, 46, 56);
+  text-decoration: none;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  padding: 15px;
+  /* outline animation */
+  --outline: 2px solid rgb(7, 23, 29);
+  outline: var(--outline);
+  transition: outline-offset 200ms ease;
+}
+
+#configButton:hover, #configButton:focus{
+  outline: var(--outline);
+  outline-offset: -6px;
+}
+
+/* main */
+main {
+  display: grid;
+}
+
+main div {
+  padding: 50px 0 200px 0;
+  position: relative;
+  width: 100vw;
+}
+
+main div h1, h3 {
+ position: relative;
+ left: 50%;
+ z-index: 50;
+ width: max-content;
+}
+
+main div:nth-child(even) {
+  color: white;
+  background-color: #151515;
+}
+
+main div h1,h3 {
+  color: #f7b731;
+}
+
+ul {
+  list-style: none;
+  height: min-content;
+  width: max-content;
+  margin: auto;
+}
+
+ul li {
+  margin: 10px;
+}
+
+ul li::before {
+  content: "*";
+  color: #f7b731;
+  margin: 10px;
+}
+
+/* slideShow */
+.slideShow {
+  height: 90vw;
+  padding: 0;
+  background-image: url('../pics/logoSlide.png');
+}
+
+.slideShow h1 {
+  font-size: 100px;
+  left: 0;
+  top: 30%;
+} 
+
+.slideShow h3 {
+  font-size: 75px;
+  left: 0;
+  top: 30%;
+}
+
+.mySlides{
+  width: 80vw;
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 10px 20px #151515;
+}
+
+/* engine */
+#engine {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 80px 80px auto 130px;
+}
+
+#engine h3 {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+
+#engine h1 {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+
+#engine ul {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+#engine #corvetteEngine {
+  opacity: 0.8;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  margin: auto;
+}
+
+#engine #engineStartStop {
+  grid-column: 1/2;
+  grid-row: 4/5;
+
+  margin: auto;
+  padding: 30px 0 0 0;
+  width: 130px;
+  height: 130px;
+  font-size: 15px;
+  border-radius: 50%;
+  background-color: white;
+  color: #666;
+  text-align: center;
+}
+
+#engine #engineStartStop p:nth-child(2) {
+  font-size: 20px;
+}
+
+#engine #engineStartStop hr {
+  width: 25px;
+  height: 5px;
+  background-color: #26DE81;
+  margin: auto;
+  margin-top: 5px;
+  border: none;
+}
+
+#engine::after, #engine::before{
+  position: absolute;
+  content: "";
+  width: 150px;
+  height: 150px;
+  background-color: #151515;
+  bottom: 0;
+  z-index: 10;
+}
+
+#engine::before{
+  right:19.9%;
+  transform: skew(0, 20deg);
+
+}
+
+#engine::after{
+  left:80%;
+  transform: skew(0, -20deg);
+}
+/* Dimension */
+#dimension {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px auto auto;
+  background-image: url('../pics/logoSlide.png');
+}
+
+#dimension ul{
+  margin: 0 0 50px 100px;
+}
+
+#dimension .autosize {
+  visibility: collapse;
+}
+
+#dimension::after, #dimension::before{
+  position: absolute;
+  content: "";
+  width: 150px;
+  height: 150px;
+  background-color: #f8f8f8;
+  bottom: 0;
+  z-index: 10;
+}
+
+#dimension::before{
+  right:80%;
+  transform: skew(0, 20deg);
+
+}
+
+#dimension::after{
+  left:19.9%;
+  transform: skew(0, -20deg);
+
+}
+
+#corvetteSide {
+  width: 1050px;
+  height: 400px;
+  background-color: #fff1c4;
+  margin: auto;
+}
+
+#corvetteSide img
+{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 50px;
+}
+
+#corvetteSide p {
+  position: absolute;
+  color: #151515;
+  transform: translate(-50%, -50%);
+}
+
+#corvetteSide #length {
+  width: 0;
+  height: 5px;
+  background-color: #f7b731;
+  padding: 0;
+  margin-bottom: 10px;
+  position: absolute;
+  left: 50%;
+  bottom: 65px;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+#corvetteSide #lengthP {
+  left: 50%;
+  bottom: 5px;
+}
+
+#corvetteSide #height {
+  width: 5px;
+  height: 0;
+  background-color: #f7b731;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 110px;
+  transform: translateY(-50%);
+}
+
+#corvetteSide #heightP {
+  top: 50%;
+  left: 55px;
+}
+
+/* Power output */
+#powerOutput ul {
+  width: 90vw;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#powerOutput ul li {
+  width: 550px;
+  height: 35px;
+}
+
+
+.speed {
+  height: 60px;
+  width: 60px;
+  padding: 0;
+  border: 5px solid white;
+  border-radius: 50%;
+  position: relative;
+  transform: translate(50px, -40px);
+}
+
+#powerOutput ul li p {
+  transform: translate(130px, -100px);
+}
+
+.speedDiv {
+  width: 60px;
+  height: 31px;
+  padding: 0;
+  background-color: #151515;
+  position: absolute;
+  bottom: -5px;
+  left: -5px;
+}
+
+.speed .dote {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  background-color: white;
+  position: absolute;
+  left: 21px;
+  top: 21px;
+  border-radius: 50%;
+}
+
+.speed .needle1, .needle2 {
+  background-color: white;
+  padding: 0;
+  width: 3px;
+  height: 42px;
+  position: absolute;
+  left: 24px;
+  top: 4px;
+  border-radius: 25%;
+  transform: rotate(-60deg);
+}
+
+.speedStart1 {
+  animation: speedAnimation 3s 1 both;
+  animation-delay: 0.5s;
+}
+
+.speedStart2 {
+  animation: speedAnimation 10.2s 1 both;
+  animation-delay: 0.5s;
+}
+
+@keyframes speedAnimation {
+	0% {transform: rotate(-60deg);}
+  100% {transform: rotate(60deg);}
+}
+
+
+/* footer */
+footer {
+  background-color: #151515;
+  color: white;
+  border-top: 2px solid #5c5c5c;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer ul li {
+  display: block;
+  font-size: 15px;
+}
+
+footer ul li::before {
+  content: " ";
+}
+
+@font-face {
+  font-family: "grandsport";
+  src: url("../font/grandsport.ttf") format("truetype");
+}
+
+@media only screen and (max-width: 1200px) {
+  
+  #engine {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 80px auto auto 130px;
+  }
+  
+  #engine h3 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  
+  #engine h1 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  
+  #engine ul {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin: 50px auto;
+  }
+  
+  #engine #corvetteEngine {
+    opacity: 0.8;
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  
+  #engine #engineStartStop {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+}
+
+@media only screen and (max-width: 1110px) {
+  header #corvetteHeaderLogo{
+    font-size: 45px;
+  }
+
+  #dimension .autosize {
+    visibility: visible;
+  }
+
+  #corvetteSide .visibleAnimation, #lengthP, #heightP {
+    visibility: collapse;
+  }
+
+  #corvetteSide {
+    width: 0;
+    height: 0;
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  main div h1, h3 {
+    left: 0;
+    transform: translateX(0);
+    margin: auto;
+   }
+}
+
+@media only screen and (max-width: 900px) {
+  header img {
+    width: 100vw;
+  }
+
+  header #corvetteHeaderLogo{
+    font-size: 35px;
+  }
+
+  #dimension {
+    grid-template-rows: 100px auto 800px;
+  }
+
+  #dimension #corvetteSide img {
+    grid-row: 3/4;
+    transform: rotate(90deg);
+    left: -400px;
+    top: 0;
+    margin: auto;
+  }
+
+  #engine #corvetteEngine {
+    width: 600px;
+    height: 450px;
+  }
+
+  footer ul li {
+    font-size: 10px;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  nav ul {
+    justify-content: space-evenly;
+  }
+
+  nav ul .visibilityCollapse{
+    visibility: hidden;
+    width: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  main div h1 {
+    font-size: 50px;
+  }
+
+  main div h3 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  header #corvetteHeaderLogo{
+    font-size: 25px;
+  }
+
+  footer ul li {
+    font-size: 8px;
+  }
+
+  main div h1 {
+    font-size: 35px;
+  }
+
+  main div h3 {
+    font-size: 20px;
+  }
+
+  .slideShow h1 {
+    font-size: 60px;
+  }
+
+  .slideShow h3 {
+    font-size: 50px;
+  }
+
+  ul li {
+    font-size: 20px;
+  }
+
+  #engine::after, #engine::before{
+    width: 0;
+    height: 0;
+  }
+
+  #dimension::after, #dimension::before{
+    width: 0;
+    height: 0;
+  }
+
+  #engine #corvetteEngine {
+    width: 300px;
+    height: 225px;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  footer ul {
+    display: block;
+    text-align: center;
+  }
+
+  main div h1 {
+    font-size: 25px;
+  }
+
+  main div h3 {
+    font-size: 15px;
+  }
+
+  .slideShow h1 {
+    font-size: 50px;
+  }
+
+  .slideShow h3 {
+    font-size: 40px;
+  }
+
+  header #corvetteHeaderLogo{
+    font-size: 20px;
+  }
+
+  ul li {
+    font-size: 15px;
+  }
+
+  #configButton{
+    width: auto;
+    height: auto;
+    padding: 7px;
+    margin: 10px;
+  }
+}

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Corvette configurator">
+    <meta name="keywords" content=" Corvette">
+    <meta name="author" content="Steffen Bollwahn, Linus-Alexander Steinert">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurator</title>
+    <link rel="shortcut icon" type="image/x-icon" href="pics/LOGO.png">
+    <link rel="stylesheet" href="css/configuratorLayout.css">
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/configurator.js"></script>
+    
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html"><img id="logo" src="pics/LOGO.png" width="100px" height="100px" alt="Logo"></a></li>
+        <li><a id="checkoutButton" href="">Checkout!</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <model-viewer src="models/YelGreNoW.glb" class="modelViewer" load ar auto-rotate disable-zoom></model-viewer>
+    
+      <div id="options">
+        <h2 id="coat">Choose the base color of your car</h1>
+          <ul id="coatUl">
+            <li name="Yellow" id="cYellow" class="Yel" value="1000" data-price="100"></li>
+            <li name="Red" id="cRed" value="500" class="Red" data-price="1000"></li>
+            <li name="Black" id="cBlack" value="0" class="Bla" data-price="1000"></li>
+          </ul>
+        <h2 id="rims">Choose the color of your rims</h1>
+          <ul id="rimsUl">
+            <li name="Grey" id="rGrey" class="Gre" value="50" data-price="0"></li>
+            <li name="Black" id="rBlack" class="Bla" value="25" data-price="200"></li>
+            <li name="Gold" id="rGold" class="Gol" value="10" data-price="200"></li>
+          </ul>
+        <h2 id="wing">Add the track package</h1>
+          <ul id="wingUl">
+            <li name="No" id="noWing" class="NoW" value="0"data-price="0"></li>
+            <li name="Yes" id="wing" class="Win" value="2000" data-price="2500"></li>
+          </ul>
+      </div>
+
+    </main>
+    <div id="checkout">
+      <ul>
+        <li id="back">&#8592; Back</li>
+        <li id="infoHover">?</li>
+      </ul>
+      <form>
+        Vorname: <br>
+        <input type="text" name="forename" placeholder="Vorname" id="firstInput"><br>
+        Name: <br>
+        <input type="text" name="name" placeholder="Name"><br>
+        E-Mail: <br>
+        <input type="text" name="email" placeholder="E-Mail"><br>
+        <button type="submit">Send</button>
+      </form>
+      <div id="selection">
+        <p id="selCol">Color: </p>
+        <p id="selRim">Color: </p>
+        <p id="selTra">Track package: </p>
+        <!-- Das Ignorieren war als Test für den Preis/Autoconfig -->
+        <p id="price">Price: </p>
+      </div>
+
+      <div id="info">
+        <p>After you submitted your info, we will send you an E-Mail with details on your order.
+            Please read the E-Mail carefully and check if everything is correct. In addition there will be billing information, please read them and follow the instructions given.
+            Once the transaction is done, we will send you another confirmation E-Mail which contains the processing time of your custumized Corvette C7.
+            Thank you for ordering!</p>
+        </div>
+    </div>
+
+    <footer>
+      <ul>
+        <li>LS Performance © 2021</li>
+        <li>Datenschutz u. Rechtsgrundlage</li>
+        <li>Impressum</li>
+        <li>Kontakt</li>
+        <li>Info</li>
+      </ul>
+    </footer>
+  </body>
+</html>

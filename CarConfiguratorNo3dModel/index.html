@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Corvette configurator">
+    <meta name="keywords" content=" Corvette">
+    <meta name="author" content="Steffen Bollwahn, Linus-Alexander Steinert">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LS Performance</title>
+    <link rel="shortcut icon" type="image/x-icon" href="pics/LOGO.png">
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/allg.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <audio id="startUpEngine">
+      <source src="sound/CorvetteEngine.mp3" type="audio/mpeg">
+    </audio>
+  </head>
+
+  <body>
+    <header>
+      <img id="startUpAnimation" src="pics/logoheader.png">
+      <h1 id="corvetteHeaderLogo">Corvette</h1>
+      <h1 id="scrollDown">please scroll down</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#"><img id="logo" src="pics/LOGO.png" width="100px" height="100px" alt="Logo"></a></li>
+        <li class="visibilityCollapse"><a href="#engine">Engine</a></li>
+        <li class="visibilityCollapse"><a href="#dimension">Dimension</a></li>
+        <li class="visibilityCollapse"><a href="#powerOutput">Power Output</a></li>
+        <li><a id="configButton" href="configurator.html">Configure now!</a></li>
+      </ul>
+    </nav>
+
+
+    <main>
+
+      <div class="slideShow">
+        <h1>Corvette C7</h1>
+        <h3>LS Performance</h3>
+        <img class="mySlides" src="pics/Corvette1.jpg">     
+      </div>
+        
+      <div id="engine">
+        <h3 class="scrollE1">Pure American Muscle, powered by the</h3>
+        <h1 class="scrollE2">6.2L Supercharged LT5 V8</h1>
+        <img id="corvetteEngine" src="pics/CorvetteEngine.png" alt="Corvette Engine" width="800" height="600">
+        <div id="engineStartStop">
+          <p>START</p>
+          <p>ENGINE</p>
+          <p>STOP</p>
+          <hr>
+        </div>
+        <ul>
+          <li>765 HP at 6300 RPM</li>
+          <li>969 NM at 4400 RPM</li>
+          <li>8-speed automatic</li>
+          <li>Rear wheel drive</li>
+        </ul>
+      </div>
+      <div id="dimension">
+        <h1 class="scroll">Dimensions</h1>
+        <ul>
+          <li>Wheelbase 2710mm</li>
+          <li>Weight 1.615kg</li>
+          <li class="autosize">Width 4514</li>
+          <li class="autosize">Height 1239</li>
+        </ul>
+        <div id="corvetteSide">
+          <img src="pics/CorvetteSide.png" alt="Corvette Side">
+          <div id="length" class="visibleAnimation"></div>
+          <p id="lengthP"></p>
+          <div id="height" class="visibleAnimation"></div>
+          <p id="heightP"></p>
+        </div>
+      </div>
+      <div id="powerOutput">
+        <h1 class="scroll">Power output</h1>
+
+        <ul>
+          <li>
+            <div class="speed">
+              <div class="needle1 visibleAnimation"></div>
+              <div class="dote"></div>
+              <div class="speedDiv"></div>
+            </div>
+            <p>0-100kp/h 3,0s</p>
+          </li>     
+          <li>
+            <div class="speed">
+              <div class="needle2 visibleAnimation"></div>
+              <div class="dote"></div>
+              <div class="speedDiv"></div>
+            </div>
+            <p>0-200kp/h 10,2s</p>
+          </li>
+          <li>1/4 mile in 10,6 seconds at 215 kp/h</li>
+          <li>341 kp/h top speed</li>
+        </ul>
+      </div>
+    </main>
+
+    <footer>
+      <ul>
+        <li>LS Performance © 2021</li>
+        <li>Datenschutz u. Rechtsgrundlage</li>
+        <li>Impressum</li>
+        <li>Kontakt</li>
+        <li>Info</li>
+      </ul>
+    </footer>
+  </body>
+</html>
