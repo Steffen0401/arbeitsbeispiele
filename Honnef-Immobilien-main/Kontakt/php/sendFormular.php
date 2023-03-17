@@ -62,7 +62,7 @@
         //send email
         if ($sendMail) {
             $header="From:".$_POST['email'];
-            $email_get = "linus.steinert@icloud.com";
+            $email_get = "";
             $regarding = "Kontaktformular";
             $msg =  "Versendet am " . date('d.m.Y') . " um " . date('H:i') . "Uhr \n" .
                     "\n" .
